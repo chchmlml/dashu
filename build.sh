@@ -11,7 +11,6 @@ TARGET_JAR=""
 TARGET_PATH="${SOURCE_ROOT}/${TARGET_NAME}"
 TARGET_BIN_PATH="${SOURCE_ROOT}/${TARGET_NAME}/${BIN_NAME}"
 TARGET_VERSION="*"
-IS_WEB_SERVICE=1
 
 TARGET_JAR="${TARGET_BIN_PATH}/app.jar"
 BUILD_PATH="${SOURCE_ROOT}"
@@ -36,4 +35,4 @@ echo ">>> cp ${BUILD_TARGET_JAR} ${TARGET_JAR}"
 cp ${BUILD_TARGET_JAR} ${TARGET_JAR}
 
 docker build -t chchmlml/stock-monitor-collection .
-docker push chchmlml/stock-monitor-collection:latest
+#docker push chchmlml/stock-monitor-collection:latest

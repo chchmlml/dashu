@@ -12,7 +12,7 @@ ENV CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 ADD target/bin/app.jar app.jar
 EXPOSE 12001
-ENTRYPOINT ["java","-jar","/data/app.jar"]
+ENTRYPOINT ["java","-jar","/data/app.jar", "--server.port=12001", "--spring.profiles.active=prod"]
 
 
 

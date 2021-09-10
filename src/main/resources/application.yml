@@ -1,0 +1,11 @@
+# http://localhost:7777/Prometheus
+management:
+  #server:
+  #port: 7777 #不单独设置端口的话，和服务的端口一致
+  #servlet:
+  #context-path: /boot
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /    # 访问路径中没有actuator 直接是http://localhost:8080/Prometheus
