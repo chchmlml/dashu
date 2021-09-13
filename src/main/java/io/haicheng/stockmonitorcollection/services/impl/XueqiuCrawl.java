@@ -5,6 +5,8 @@ import io.haicheng.stockmonitorcollection.services.Crawl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 /**
  * <p>Title: XueqiuCrawl</p>
  * <p>Description: </p>
@@ -15,13 +17,18 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @Slf4j
-public class XueqiuCrawl implements Crawl {
+public class XueqiuCrawl implements Crawl<Object> {
 
     private static final String QUOTE_URL = "https://stock.xueqiu.com/v5/stock/quote.json?symbol=SH601688";
 
-    public void getTest(){
+    public void getTest() {
 
         String body = HttpRequest.get(QUOTE_URL).execute().body();
         log.info("[XueqiuCrawl]->getTest {}", body);
+    }
+
+    @Override
+    public Optional<Object> crawl() {
+        return Optional.empty();
     }
 }

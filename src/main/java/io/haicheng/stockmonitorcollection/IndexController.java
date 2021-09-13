@@ -27,14 +27,14 @@ public class IndexController {
     private Counter counter_index;
 
     @PostConstruct
-    private void init(){
+    private void init() {
         counter_core = registry.counter("app_requests_method_count", "method", "IndexController.core");
         counter_index = registry.counter("app_requests_method_count", "method", "IndexController.index");
     }
 
     @RequestMapping(value = "/index")
-    public Object index(){
-        try{
+    public Object index() {
+        try {
             counter_index.increment();
         } catch (Exception e) {
             return e;
@@ -43,8 +43,8 @@ public class IndexController {
     }
 
     @RequestMapping(value = "/core")
-    public Object coreUrl(){
-        try{
+    public Object coreUrl() {
+        try {
             counter_core.increment();
         } catch (Exception e) {
             return e;
