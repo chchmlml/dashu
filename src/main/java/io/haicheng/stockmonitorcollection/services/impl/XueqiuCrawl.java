@@ -31,4 +31,9 @@ public class XueqiuCrawl implements Crawl<Object> {
     public Optional<Object> crawl() {
         return Optional.empty();
     }
+
+    @Override
+    public void refresh() {
+
+    }
 }

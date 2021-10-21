@@ -12,4 +12,5 @@ import java.util.Optional;
  */
 public interface Crawl<T> {
     Optional<T> crawl();
+    void refresh();
 }

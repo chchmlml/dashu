@@ -21,7 +21,8 @@ public class Industry {
     List<Item> items;
 
     @Builder
-    public static class Item {
+    @Getter
+    public static class Item implements Comparable<Item> {
         private String code;
         private String name;
         private String companyCount;
@@ -34,5 +35,10 @@ public class Industry {
         private String volume;
         //总成交额
         private String total;
+
+        @Override
+        public int compareTo(Item o) {
+            return this.getCode().equals(o.getCode()) ? 0 : -1;
+        }
     }
 }

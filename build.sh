@@ -35,4 +35,4 @@ echo ">>> cp ${BUILD_TARGET_JAR} ${TARGET_JAR}"
 cp ${BUILD_TARGET_JAR} ${TARGET_JAR}
 
 docker build -t chchmlml/stock-monitor-collection .
-#docker push chchmlml/stock-monitor-collection:latest
+docker push chchmlml/stock-monitor-collection:latest
