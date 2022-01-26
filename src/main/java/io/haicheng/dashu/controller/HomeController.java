@@ -1,14 +1,16 @@
 package io.haicheng.dashu.controller;
 
-import io.haicheng.dashu.domain.entity.Stock;
-import io.haicheng.dashu.services.StockService;
+import io.haicheng.dashu.util.JsonUtil;
+import lombok.Builder;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * <p>Title: HomeController</p>
@@ -18,21 +20,19 @@ import javax.servlet.http.HttpServletRequest;
  * @author haicheng
  * @date 2021/9/9 6:07 下午
  */
-@RestController
+@Controller
 public class HomeController {
 
-    @RequestMapping(value = {"/metrics/test"}, method = RequestMethod.GET)
-    public String minute(HttpServletRequest request) {
-
-        return "everything is ok";
-    }
-
     @Autowired
-    private StockService stockService;
+    HttpServletRequest request;
 
-    @RequestMapping("/findAll")
-    @ResponseBody
-    public Iterable<Stock> findAll() {
-        return stockService.findAll();
+    /**
+     * 进入登录页面
+     *
+     * @return 重定向至登录页面
+     */
+    @GetMapping("/")
+    public String toIndex() {
+        return "main.html";
     }
 }

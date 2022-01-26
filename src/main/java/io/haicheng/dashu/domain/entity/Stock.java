@@ -34,6 +34,7 @@ public class Stock {
     private Double roe;
     private Double currentPrice;
     private Double minPrice;
+    private Double bugPrice;
     private Double dividend;
     private Double hold;
     private Long createdAt;

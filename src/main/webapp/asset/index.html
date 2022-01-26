@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>指数管理</title>
+  <link rel="stylesheet" type="text/css" href="../static/easyui/themes/bootstrap/easyui.css"/>
+  <link rel="stylesheet" type="text/css" href="../static/easyui/themes/icon.css"/>
+<link rel="stylesheet" type="text/css" href="../static/css/global.css"/>
+  <link rel="stylesheet" type="text/css" href="../static/css/index.css"/>
+  <script type="text/javascript" src="../static/easyui/jquery.min.js"></script>
+  <script type="text/javascript" src="../static/easyui/jquery.easyui.min.js"></script>
+  <script type="text/javascript" src="../static/easyui/locale/easyui-lang-zh_CN.js"></script>
+  <script type="text/javascript" src="../static/js/index.js"></script>
+</head>
+<body>
+<table id="dg"></table>
+
+<div id="tb">
+  <div>
+    <a href="javascript:openIndexAddDialog()" class="easyui-linkbutton" iconCls="save">添加</a>
+    <a href="javascript:openIndexModifyDialog()" class="easyui-linkbutton" iconCls="update">修改</a>
+    <a href="javascript:deleteIndex()" class="easyui-linkbutton" iconCls="delete">删除</a>
+    <input type="text" id="s_name" class="easyui-textbox" data-options="prompt:'指数名称'" />
+    <a href="javascript:searchIndex()" class="easyui-linkbutton" iconCls="search">搜索</a>
+  </div>
+</div>
+
+<div id="dlg" class="easyui-dialog" closed="true" buttons="#dlgTb">
+  <form method="post" id="fm">
+    <table cellspacing="8px">
+      <tr>
+        <td><input id="name" name="name" type="text" class="easyui-textbox" label="指数名称:"/></td>
+      </tr>
+      <tr>
+        <td><input id="code" name="code" type="text" class="easyui-textbox" label="指数code:"/></td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<div id="dlgTb">
+  <a href="javascript:saveData()" class="easyui-linkbutton" iconCls="save">保存</a>
+  <a href="javascript:closeDlg()" class="easyui-linkbutton" iconCls="icon-closed">关闭</a>
+</div>
+</body>
+</html>

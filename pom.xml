@@ -9,9 +9,9 @@
         <relativePath/>
     </parent>
     <groupId>io.haicheng</groupId>
-    <artifactId>stock-monitor-collection</artifactId>
+    <artifactId>dashu</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>stock-monitor-collection</name>
+    <name>dashu</name>
     <description>stock-monitor-collection</description>
     <properties>
         <java.version>1.8</java.version>

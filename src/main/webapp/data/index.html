@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>基金管理</title>
+  <link rel="stylesheet" type="text/css" href="../static/easyui/themes/bootstrap/easyui.css" />
+  <link rel="stylesheet" type="text/css" href="../static/easyui/themes/icon.css" />
+  <link rel="stylesheet" type="text/css" href="../static/css/global.css" />
+  <link rel="stylesheet" type="text/css" href="../static/css/data.css" />
+  <script type="text/javascript" src="../static/easyui/jquery.min.js"></script>
+  <script type="text/javascript" src="../static/easyui/jquery.easyui.min.js"></script>
+  <script type="text/javascript" src="../static/easyui/locale/easyui-lang-zh_CN.js"></script>
+  <script type="text/javascript" src="../static/js/data.js"></script>
+</head>
+<body>
+<table id="dg" class="easyui-datagrid" ></table>
+
+<div id="tb">
+  <div>
+    <select class="easyui-combobox" id="s_date" name="s_date" panelHeight="auto" data-options="prompt:'日期'"/>
+    <input type="text" id="s_name"  class="easyui-textbox"  data-options="prompt:'基金名称'" />
+    <a href="javascript:searchData()" class="easyui-linkbutton" iconCls="search">搜索</a>
+  </div>
+</div>
+
+</body>
+</html>

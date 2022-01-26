@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+body {
+	margin: 1px !important;
+}
+
+
+#name{
+	width: 300px;
+}
+
+#code{
+	width: 300px;
+}

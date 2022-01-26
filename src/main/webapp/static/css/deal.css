@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+body {
+	margin: 1px !important;
+}
+
+
+#fm{
+	padding: 10px 20px 10px 20px;
+}
+
+#date{
+	width: 200px;
+	border-radius: 4px 4px 4px 4px;
+}
+
+#fundId{
+	width: 200px;
+	border-radius: 4px 4px 4px 4px;
+}
+
+#sum{
+	width: 200px;
+	border-radius: 4px 4px 4px 4px;
+}
+
+fieldset{
+	border-color: #E7F0FF
+}

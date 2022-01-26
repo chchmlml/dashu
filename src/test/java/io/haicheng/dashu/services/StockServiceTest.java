@@ -64,6 +64,7 @@ public class StockServiceTest {
         stock.setRoe(3.1D);
         stock.setCurrentPrice(10.0D);
         stock.setMinPrice(9.0D);
+        stock.setBugPrice(19.0D);
         stock.setDividend(9.0D);
         stock.setHold(10.0D);
         stock.setCreatedAt(System.currentTimeMillis());

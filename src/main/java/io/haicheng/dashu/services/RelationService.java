@@ -12,4 +12,6 @@ import org.springframework.data.repository.CrudRepository;
  * @date 2022/1/13 18:12
  */
 public interface RelationService extends CrudRepository<Relation, Integer> {
+
+
 }
