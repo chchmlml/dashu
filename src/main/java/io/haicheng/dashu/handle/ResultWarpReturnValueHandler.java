@@ -1,4 +1,4 @@
-package io.haicheng.stockmonitorcollection;
+package io.haicheng.dashu.handle;
 
 /**
  * <p>Title: ResultWarpReturnValueHandler</p>
@@ -9,7 +9,7 @@ package io.haicheng.stockmonitorcollection;
  * @date 2022/1/13 18:45
  */
 
-import io.haicheng.stockmonitorcollection.domain.dto.Result;
+import io.haicheng.dashu.domain.dto.Result;
 import org.springframework.core.MethodParameter;
 import org.springframework.lang.Nullable;
 import org.springframework.web.context.request.NativeWebRequest;

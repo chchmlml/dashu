@@ -1,4 +1,4 @@
-package io.haicheng.stockmonitorcollection.domain.dto;
+package io.haicheng.dashu.domain.dto;
 
 /**
  * <p>Title: Result</p>

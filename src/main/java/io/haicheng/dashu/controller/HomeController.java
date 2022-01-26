@@ -1,7 +1,7 @@
-package io.haicheng.stockmonitorcollection;
+package io.haicheng.dashu.controller;
 
-import io.haicheng.stockmonitorcollection.domain.entity.Stock;
-import io.haicheng.stockmonitorcollection.services.StockService;
+import io.haicheng.dashu.domain.entity.Stock;
+import io.haicheng.dashu.services.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,13 +29,6 @@ public class HomeController {
 
     @Autowired
     private StockService stockService;
-
-    @RequestMapping("/add")
-    @ResponseBody
-    public Iterable<Stock> add() {
-        stockService.save(Stock.builder().name("ceshi").code("ZS111111").industry("计算机").build());
-        return stockService.findAll();
-    }
 
     @RequestMapping("/findAll")
     @ResponseBody

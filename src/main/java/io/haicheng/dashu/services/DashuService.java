@@ -1,6 +1,6 @@
-package io.haicheng.stockmonitorcollection.services;
+package io.haicheng.dashu.services;
 
-import io.haicheng.stockmonitorcollection.domain.entity.Stock;
+import io.haicheng.dashu.domain.entity.Dashu;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -11,5 +11,5 @@ import org.springframework.data.repository.CrudRepository;
  * @author haicheng
  * @date 2022/1/13 18:12
  */
-public interface StockService extends CrudRepository<Stock, String> {
+public interface DashuService extends CrudRepository<Dashu, Integer> {
 }

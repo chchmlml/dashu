@@ -1,4 +1,4 @@
-package io.haicheng.stockmonitorcollection.domain.entity;
+package io.haicheng.dashu.domain.entity;
 
 import lombok.Builder;
 import lombok.Getter;

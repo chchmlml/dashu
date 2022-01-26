@@ -1,4 +1,4 @@
-package io.haicheng.stockmonitorcollection.domain.constant;
+package io.haicheng.dashu.domain.constant;
 
 /**
  * <p>Title: URL</p>
