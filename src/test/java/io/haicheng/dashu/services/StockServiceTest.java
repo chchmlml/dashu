@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.util.Assert;
+import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 import java.util.Optional;
@@ -31,6 +32,15 @@ public class StockServiceTest {
 
 
     @Test
+    public void findByDashuId(){
+        List<Stock> data = (List<Stock>) stockService.findAddByDashuId(1314);
+        log.info("findAll {}", data);
+        Assert.notEmpty(data, "查不出");
+        List<Stock> data2 = (List<Stock>) stockService.findAddByDashuId(1);
+        Assert.isTrue(CollectionUtils.isEmpty(data2), "查出来了");
+    }
+
+    @Test
     public void findAdd(){
         List<Stock> data = (List<Stock>) stockService.findAll();
         log.info("findAll {}", data);
@@ -51,16 +61,17 @@ public class StockServiceTest {
         stock.setName("测试");
         stock.setCode("123");
         stock.setIndustry("建筑材料");
+        stock.setDashuId(1314);
 
         stock.setPb(1.00D);
         stock.setPbScore(100.00D);
         stock.setPeTtm(1.0D);
         stock.setPeTtmScore(100.00D);
         stock.setChgScore(100.0D);
-        stock.setBusinessReputation(true);
-        stock.setInvisibleAssets(0.10); //百分比
-        stock.setStockMortgage(true);
-        stock.setFinancial(true);
+        stock.setBusinessReputation("PASS");
+        stock.setInvisibleAssets("0.1"); //百分比
+        stock.setStockMortgage("PASS");
+        stock.setFinancial("PASS");
         stock.setRoe(3.1D);
         stock.setCurrentPrice(10.0D);
         stock.setMinPrice(9.0D);
